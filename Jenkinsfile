@@ -8,7 +8,7 @@ stages {
 stage('Checkout') {
 steps {
 git branch: 'main',
-url: 'https://github.com/TU-USUARIO/mi-web-
+url: 'https://github.com/scaryb00/mi-web-
 go.git'
 }
 }
