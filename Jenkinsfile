@@ -18,8 +18,8 @@ pipeline {
 		}
 		stage('Deploy to Kubernetes') {
 			steps {
-				sh 'kubectl apply -f k8s/deployment.yaml'
-				sh 'kubectl rollout restart deployment/mi-web-deployment'
+				sh 'KUBECONFIG=/var/lib/jenkins/.kube/config kubectl apply -f k8s/deployment.yaml --validate=false'
+				sh 'KUBECONFIG=/var/lib/jenkins/.kube/config kubectl apply -f k8s/service.yaml --validate=false'
 			}
 		}
 	}
