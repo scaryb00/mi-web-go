@@ -8,8 +8,7 @@ stages {
 stage('Checkout') {
 steps {
 git branch: 'main',
-url: 'https://github.com/scaryb00/mi-web-
-go.git'
+url: 'https://github.com/scaryb00/mi-web-go.git'
 }
 }
 stage('Build Docker Image') {
@@ -20,8 +19,7 @@ sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
 stage('Deploy to Kubernetes') {
 steps {
 sh 'kubectl apply -f k8s/deployment.yaml'
-sh 'kubectl rollout restart deployment/mi-web-
-deployment'
+sh 'kubectl rollout restart deployment/mi-web-deployment'
 }
 }
 }
