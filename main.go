@@ -14,8 +14,8 @@ func main() {
     http.ServeFile(w, r, "static/index.html")
 	})
 
-	fmt.Println("Servidor funcionando en http://localhost:8080")
-    error := http.ListenAndServe(":8080", nil) //instrucción que enciende el servidor utilizando el puerto 8080, guardamos en una variable error
+	fmt.Println("Servidor funcionando en http://localhost:8081")
+    error := http.ListenAndServe(":8081", nil) //instrucción que enciende el servidor utilizando el puerto 8080, guardamos en una variable error
 
 	if error != nil {  //si "error" no es nil, entonces ha habido un error y se imprime por pantalla
 		fmt.Printf("Error al iniciar el servidor: %v\n", error)
