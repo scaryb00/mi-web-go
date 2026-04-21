@@ -12,8 +12,6 @@ spec:
       labels:
         app: mi-web
     spec:
-      # Usamos la red del host para saltarnos los problemas de rutas internas
-      hostNetwork: true 
       containers:
       - name: mi-web-container
         image: mi-web-uoc:latest
